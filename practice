@@ -1,0 +1,40 @@
+''' this is practice'''
+# Variables
+school = 'MCTC'
+gpa = 3.7
+students_in_class = 22
+studentsInClass = 'not convential to use camelCase'
+
+
+# IF statements 
+if gpa == 4:
+    print('Wow!')
+elif gpa > 3:
+    print('Awesome!')
+else: 
+    print('You need to study')   
+
+# LISTS []  # IN opperater 
+schools = ['MCTC', 'DHS', 'SCHOOL']
+if 'MCTC' in schools:
+    print('MCTC is one of the schools in the list')
+
+schools.sort()
+print(schools)
+school.append('Century College')
+print(schools)
+print(schools.reverse())
+
+# strings 
+class_name = 'Software Developent'
+print(class_name.upper())
+print(len(class_name))
+print(class_name.split())
+print(class_name.split(',')) #spliting by a comma 
+
+if 'Capstone' in class_name:
+    print('This must be the capstone')
+
+
+#LISTS
+#   
