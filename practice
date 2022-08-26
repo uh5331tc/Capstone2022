@@ -14,6 +14,8 @@ elif gpa > 3:
 else: 
     print('You need to study')   
 
+
+
 # LISTS []  # IN opperater 
 schools = ['MCTC', 'DHS', 'SCHOOL']
 if 'MCTC' in schools:
@@ -21,9 +23,11 @@ if 'MCTC' in schools:
 
 schools.sort()
 print(schools)
-school.append('Century College')
+schools.append('Century College')
 print(schools)
 print(schools.reverse())
+
+
 
 # strings 
 class_name = 'Software Developent'
@@ -36,5 +40,76 @@ if 'Capstone' in class_name:
     print('This must be the capstone')
 
 
-#LISTS
-#   
+
+#LOOPS
+#   FOR LOOPS OVER A SEQUENCE
+for s in schools:
+    print(s.upper())
+
+for letter in school:
+    print(letter)   
+    # print(letter * 10)  MMMMMMMMMMM CCCCCCCCC TTTTTTTT CCCCCC etc 
+
+data = [0] * 10
+print(data) 
+
+more_data = [None] * 10
+print(more_data)
+
+# WHILE LOOPS
+name = input('Enter your name: ')
+while not name:  #this loop runs while there is NOT a NAME
+    print('Please enter at least one character ')
+    name = input('Enter your name: ')
+
+
+
+# TRUE AND FALSE AND NAME 
+start_of_semester = True
+winter = False
+
+if winter:
+    print('brrrrr!!')
+else: 
+    print('it is not winter')
+
+
+
+# DICTIONARIES 
+class_codes = { 2900: 'Capstone', 2344: 'Web Dev', 1222: 'Career Prep'}
+for code in class_codes:
+    print(code)
+    print(class_codes[code])
+
+# TUPPLE 
+for code, name in class_codes.items():
+    print(f'The class code is {code} and the name is {name}')
+
+# SLILCING STRINGS/ LISTS
+schools = ['MCTC', 'DHS', 'SCHOOL']
+first_two = schools[0:2]  #or [:2] this will make a new list
+print(first_two)
+
+last_school = schools[-1]
+print(last_school)
+last_two_schools = schools[-2:]  # SLICING TO GET LAST TWO SCHOOLS
+print(last_two_schools)
+
+
+school_name = 'Minneapolis Community and Technical College'
+city = school_name[:11]
+print(city)
+
+
+# FILE IO (INPUT AND OUTPUT)
+#with open('data.txt') as f:  # opening it as a file
+#    print(f.read())         # file . read()
+with open('schools.txt', 'w') as f: # opeing a file to WRITE
+    f.writelines(schools)    #WRIGING schools data to file
+
+# FUNCTIONS
+def get_name():   # functions in PYTHON
+    print('Hello, please enter your name!')
+    name = input('Your name is: ')
+    return name
+name = get_name()

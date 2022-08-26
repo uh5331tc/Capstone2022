@@ -5,7 +5,6 @@ def main():
     sentence_to_split = input('Enter a sentence and it will be transformed: ')
     conversion(sentence_to_split)
     sentence_to_split.split()
-
 def conversion(sentence_to_split):
     word_list = sentence_to_split.split()
     new_list = []

@@ -1,15 +1,20 @@
 '''Noelle Bauer 8/25/2022 This program asks a user for the classes they are taking
 and saves them to a list'''
 
-#class_list = []
 # GET user input 
-class_names = input('What Classes are you taking this semester?')
+classes = []  #initialize an empty list for the class names to go
 
-class_list = class_names.split(' ')
-#class_list.append(class_names)
-#class_list.append(class_names.split())
-#class_list.sort()
+class_name = input('What Classes are you taking this semester?')
+
+while class_name:
+    classes.append(class_name)
+    class_name = input('Enter a class name? or press ENTER to quit: ')
+
+print(classes)
 
 #looping to print one on each line 
-for x in class_list:
-    print(x)
+for c in classes:
+    print(c)
+
+for index, c in enumerate(classes):
+    print(f'{index+1}: {c}')
